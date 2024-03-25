@@ -4,10 +4,14 @@
     --secondary-color: #48ca95;
     --bg-color: #f7f7f7;
     --light-color: #ffff;
+    --dark-color: #000;
 
     --header-title-font: Poppins-bold;
+    --section-title-font: Poppins-SemiBol;
     --text-font: Poppins;
     --menu-font: Poppins-bold;
+    --banner-subtitle-font: Poppins-Light;
+    --banner-title-font: Poppins;
 }
 
 *{
@@ -21,17 +25,28 @@
     font-family: Poppins;
     src: url('./assets/fonts/Poppins-Regular.ttf');
 }
+
 @font-face{
     font-family: Poppins-bold;
     src: url('./assets/fonts/Poppins-Bold.ttf');
 }
+
 @font-face{
     font-family: Poppins-extrabold;
     src: url('./assets/fonts/Poppins-ExtraBold.ttf');
 }
 
-/* Header */
+@font-face{
+    font-family: Poppins-SemiBol;
+    src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
 
+@font-face{
+    font-family: Poppins-Light;
+    src: url('./assets/fonts/Poppins-Light.ttf');
+}
+
+/* Header */
 header{
     background-image: url('./assets/images/banner.jpg');
     background-size: cover;
@@ -113,6 +128,7 @@ nav ul li a:hover{
 .btn:hover{
     background-color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
+    transition: all 0.5s;
 }
 
 .menu-mobile{
@@ -196,3 +212,148 @@ nav ul li a:hover{
     text-align: center;
 }
 /* Fin cards */
+
+/* Products section */
+.products{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: var(--section-title-font);
+    border-bottom: 1px solid var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.products-container{
+    background-color: var(--light-color);
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+    margin-bottom: 100px;
+}
+
+.product-card{
+    width: 205px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.product-card a{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 10px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-secondary{
+    color: var(--secondary-color);
+    padding: 15px 60px;
+    border: 2px solid var(--secondary-color);
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+.btn-secondary:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: all 0.5s;
+}
+
+@media(max-width: 1100px){
+    .products-container{
+        width: 96%;
+    }
+}
+/* Fin products section*/
+
+/* Banner section */
+.banner{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+
+.banner-content{
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content-text{
+    max-width: 500px;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-title{
+    font-size: 48px;
+    font-family: var(--banner-title-font);
+}
+
+.banner-subtitle{
+    font-size: 20px;
+    font-family: var(--banner-subtitle-font);
+}
+
+.btn-primary-full{
+    color: var(--light-color);
+    padding: 15px 60px;
+    border: 2px solid var(--secondary-color);
+    text-decoration: none;
+    margin: 0px 5px;
+    background-color: var(--secondary-color);
+}
+
+.btn-primary-full:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    transition: all 0.5s;
+}
+
+@media(max-width: 800px){
+    .banner-content{
+        flex-direction: column;
+    }
+}
+/* Fin banner section */
+
+/* Reviews section */
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.review-card{
+    max-width: 800px;
+}
+
+.review-card h5{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 800px) {
+    .review-card{
+        width: 96%;
+    }
+}
+/* Fin reviews section */
