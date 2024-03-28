@@ -7,7 +7,7 @@
     --dark-color: #000;
 
     --header-title-font: Poppins-bold;
-    --section-title-font: Poppins-SemiBol;
+    --section-title-font: Poppins-SemiBold;
     --text-font: Poppins;
     --menu-font: Poppins-bold;
     --banner-subtitle-font: Poppins-Light;
@@ -37,7 +37,7 @@
 }
 
 @font-face{
-    font-family: Poppins-SemiBol;
+    font-family: Poppins-SemiBold;
     src: url('./assets/fonts/Poppins-SemiBold.ttf');
 }
 
@@ -360,7 +360,7 @@ nav ul li a:hover{
 
 /* Form section */
 .form-contact{
-    background-image: url(./assets/images/contact_g.jpg);
+    background-image: url('./assets/images/contact_g.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -462,3 +462,90 @@ nav ul li a:hover{
     }
 }
 /* Fin form section */
+
+/* Footer section */
+footer{
+    background-image: url('./assets/images/footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyright{
+    width: 1200px;
+    color: var(--light-color);
+    border-top: 1px solid var(--light-color);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-content{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.footer-card{
+    width: 300px;
+    padding: 20px;
+    color: var(--light-color);
+}
+
+.footer-card h5{
+    font-size: 20px;
+}
+
+.footer-card p{
+    font-size: 14px;
+}
+
+.sub-input{
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: var(--section-title-font);
+}
+
+.sub-btn{
+    color: var(--light-color);
+    padding: 7px 30px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0px 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.sub-btn:hover{
+    color: var(--secondary-color);
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+.social-icons a{
+    color: var(--light-color);
+    font-size: 24px;
+    margin: 5px;
+}
+
+@media(max-width: 1200px){
+    .footer-content{
+        width: 96%;
+    }
+    .copyright{
+        width: 96%;
+    }
+    
+}
+
+/* Fin footer section */
